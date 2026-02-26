@@ -33,7 +33,6 @@ CREATE TABLE IF NOT EXISTS `movie_rental_db`.`accounts` (
   `PasswordHash` BIGINT NULL DEFAULT NULL,
   PRIMARY KEY (`ID`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 5
 DEFAULT CHARACTER SET = utf8mb3;
 
 
@@ -89,7 +88,6 @@ CREATE TABLE IF NOT EXISTS `movie_rental_db`.`card_payment_methods` (
   `CardNumber` VARCHAR(19) NULL DEFAULT NULL,
   PRIMARY KEY (`ID`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8mb3;
 
 
@@ -181,7 +179,6 @@ CREATE TABLE IF NOT EXISTS `movie_rental_db`.`genres` (
   `Name` VARCHAR(30) NULL DEFAULT NULL,
   PRIMARY KEY (`ID`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 6
 DEFAULT CHARACTER SET = utf8mb3;
 
 
@@ -210,7 +207,6 @@ CREATE TABLE IF NOT EXISTS `movie_rental_db`.`languages` (
   `Name` VARCHAR(50) NULL DEFAULT NULL,
   PRIMARY KEY (`ID`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 6
 DEFAULT CHARACTER SET = utf8mb3;
 
 
@@ -366,7 +362,6 @@ CREATE TABLE IF NOT EXISTS `movie_rental_db`.`movies` (
   `ReleaseDate` DATE NULL DEFAULT NULL,
   PRIMARY KEY (`ID`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 6
 DEFAULT CHARACTER SET = utf8mb3;
 
 
@@ -432,7 +427,6 @@ CREATE TABLE IF NOT EXISTS `movie_rental_db`.`paypal_payment_methods` (
   `Password` VARCHAR(120) NULL DEFAULT NULL,
   PRIMARY KEY (`ID`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 3
 DEFAULT CHARACTER SET = utf8mb3;
 
 
@@ -447,7 +441,6 @@ CREATE TABLE IF NOT EXISTS `movie_rental_db`.`people` (
   `LastName` VARCHAR(200) NULL DEFAULT NULL,
   PRIMARY KEY (`ID`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 9
 DEFAULT CHARACTER SET = utf8mb3;
 
 
@@ -461,7 +454,6 @@ CREATE TABLE IF NOT EXISTS `movie_rental_db`.`publishers` (
   `Name` VARCHAR(120) NULL DEFAULT NULL,
   PRIMARY KEY (`ID`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 6
 DEFAULT CHARACTER SET = utf8mb3;
 
 
@@ -483,7 +475,6 @@ CREATE TABLE IF NOT EXISTS `movie_rental_db`.`support_tickets` (
     ON DELETE CASCADE
     ON UPDATE RESTRICT)
 ENGINE = InnoDB
-AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8mb3;
 
 CREATE INDEX `FK_support_ticks_created_by_idx` ON `movie_rental_db`.`support_tickets` (`CreatedBy` ASC) VISIBLE;
