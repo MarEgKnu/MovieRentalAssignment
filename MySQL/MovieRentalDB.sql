@@ -166,7 +166,7 @@ CREATE TABLE IF NOT EXISTS `movie_rental_db`.`customer_watchtracking` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb3;
 
-CREATE INDEX `FK_customer_bookmarks_movies_idx` ON `movie_rental_db`.`customer_watchtracking` (`MovieID` ASC) VISIBLE;
+CREATE INDEX `FK_customer_watchtracking_movies_idx` ON `movie_rental_db`.`customer_watchtracking` (`MovieID` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
@@ -480,6 +480,15 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb3;
 
 CREATE INDEX `FK_support_ticks_created_by_idx` ON `movie_rental_db`.`support_tickets` (`CreatedBy` ASC) VISIBLE;
+
+CREATE INDEX idx_movies_title
+ON movie_rental_db.movies (Title);
+
+CREATE INDEX idx_people_lastname 
+ON movie_rental_db.people (LastName);
+
+CREATE INDEX idx_accounts_name 
+ON movie_rental_db.accounts (Name);
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
