@@ -484,8 +484,11 @@ CREATE INDEX `FK_support_ticks_created_by_idx` ON `movie_rental_db`.`support_tic
 CREATE INDEX idx_movies_title
 ON movie_rental_db.movies (Title);
 
-CREATE INDEX idx_people_lastname 
-ON movie_rental_db.people (LastName);
+CREATE INDEX idx_people_lastname_firstname
+ON movie_rental_db.people (LastName, FirstName);
+
+CREATE INDEX idx_people_firstname
+ON movie_rental_db.people (FirstName);
 
 CREATE INDEX idx_accounts_name 
 ON movie_rental_db.accounts (Name);
